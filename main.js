@@ -4,8 +4,6 @@ const ul3 = document.getElementById('data_category');
 const ul4 = document.getElementById('data_imgs');
 
 
-const butt = document.getElementsByTagName('button');
-
 var filterName;
 
 document.getElementById('arctic').addEventListener("click", arctiC);
@@ -14,8 +12,8 @@ document.getElementById('atlantic').addEventListener("click", atlantiC);
 document.getElementById('pacific').addEventListener("click", pacifiC);
 document.getElementById('southern').addEventListener("click", southerN);
 
-document.getElementById('select_ocean').addEventListener("click", selectOcean);
-document.getElementById('select_sea').addEventListener("click", selectOcean);
+document.getElementById('dropbtn_ocean').addEventListener("click", selectOcean);
+document.getElementById('dropbtn_sea').addEventListener("click", selectOcean);
 
 document.getElementById('arctic_sea').addEventListener("click", arcticSea);
 document.getElementById('chukchi').addEventListener("click", chukchI);
