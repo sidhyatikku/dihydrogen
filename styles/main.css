@@ -1,0 +1,32 @@
+
+body {
+  background-color:  #c5b6b6;
+  margin: 0;
+  width: 90vw;
+}
+
+.data_display {
+  display: flex;
+  align-content: space-between;
+  width: 70vw;
+}
+
+ul {
+  list-style-type: none;
+ }
+
+ li {
+   margin-top: 2vh;
+   margin-bottom: 2vh;
+ }
+
+img {
+   margin-left: 2vh;
+   height: auto;
+
+ }
+
+button {
+  cursor: pointer;
+  background-color: darkgray;
+}
