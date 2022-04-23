@@ -1,8 +1,4 @@
-const ul1 = document.getElementById('data_name');
-const ul2 = document.getElementById('data_number');
-const ul3 = document.getElementById('data_category');
-const ul4 = document.getElementById('data_imgs');
-
+const ul4 = document.getElementById('data_imgs_flex');
 
 var filterName;
 
@@ -51,45 +47,36 @@ function makeList(records) {
   for(let i = 0; i < records.length; i++) {
 
     let name = records[i].fields.Name;
-    let dataNumber = records[i].fields.Number;
+    // let dataNumber = records[i].fields.Number;
     let dataCategory = records[i].fields.category;
     let dataLinks = records[i].fields.links;
 
-    let listItem1 = document.createElement('li');
-    let listItem2 = document.createElement('li');
-    let listItem3 = document.createElement('li');
-    let listItem4 = document.createElement('li');
+    let listItem4 = document.createElement('div');
+
+
+    listItem4.setAttribute("id", "div_parent_wrap");
 
     let imgZ = document.createElement('img');
+    // let listItem1 = document.createElement('div');
+    let listItem2 = document.createElement('div');
 
-    listItem1.appendChild(document.createTextNode(name));
-    listItem2.appendChild(document.createTextNode(dataNumber));
-    listItem3.appendChild(document.createTextNode(dataCategory));
-    listItem4.appendChild(imgZ);
+    listItem4.appendChild(imgZ).className = "data_images";
+    listItem4.appendChild(listItem2).innerHTML = name + " – " + dataCategory;
+    // listItem4.appendChild(listItem1).innerHTML = dataCategory;
 
+    listItem2.setAttribute("id", "data_sea_display");
+    // listItem1.setAttribute("id", "data_ocean_display");
     imgZ.src = dataLinks;
 
-    imgZ.style.width = 20 + "px";
-
-
-  //   listItem4.src = dataLinks;
-
-    // ul4.src = "https://" + dataLinks;
-
-    ul1.appendChild(listItem1);
-    ul2.appendChild(listItem2);
-    ul3.appendChild(listItem3);
     ul4.appendChild(listItem4);
   }
 }
 
 
 function deleteData() {
-  document.getElementById("data_name").innerHTML = "";
-  document.getElementById("data_number").innerHTML = "";
-  document.getElementById("data_category").innerHTML = "";
-  document.getElementById("data_imgs").innerHTML = "";
-  // console.log("deleted");
+  document.getElementById("data_imgs_flex").innerHTML = "";
+  console.log("deleted");
+
 }
 
 function categoryFilter(filterName) {
@@ -118,32 +105,28 @@ function makeListFilter(records, filterName) {
 
     // console.log(filterName, "button clicked");
     if(dataCategory===filterName) {
-      let listItem1 = document.createElement('li');
-      let listItem2 = document.createElement('li');
-      let listItem3 = document.createElement('li');
-      let listItem4 = document.createElement('li');
+      let name = records[i].fields.Name;
+      // let dataNumber = records[i].fields.Number;
+      let dataCategory = records[i].fields.category;
+      let dataLinks = records[i].fields.links;
 
-      // console.log(dataCategory);
+      let listItem4 = document.createElement('div');
+
+
+      listItem4.setAttribute("id", "div_parent_wrap");
 
       let imgZ = document.createElement('img');
+      // let listItem1 = document.createElement('div');
+      let listItem2 = document.createElement('div');
 
-      listItem1.appendChild(document.createTextNode(name));
-      listItem2.appendChild(document.createTextNode(dataNumber));
-      listItem3.appendChild(document.createTextNode(dataCategory));
-      listItem4.appendChild(imgZ);
+      listItem4.appendChild(imgZ).className = "data_images";
+      listItem4.appendChild(listItem2).innerHTML = name + " – " + dataCategory;
+      // listItem4.appendChild(listItem1).innerHTML = dataCategory;
 
+      listItem2.setAttribute("id", "data_sea_display");
+      // listItem1.setAttribute("id", "data_ocean_display");
       imgZ.src = dataLinks;
 
-      imgZ.style.width = 20 + "px";
-
-
-    //   listItem4.src = dataLinks;
-
-      // ul4.src = "https://" + dataLinks;
-
-      ul1.appendChild(listItem1);
-      ul2.appendChild(listItem2);
-      ul3.appendChild(listItem3);
       ul4.appendChild(listItem4);
     }
   }
@@ -207,32 +190,28 @@ function makeListFilterSea(records, filterName) {
 
     // console.log(filterName, "button clicked");
     if(name===filterName) {
-      let listItem1 = document.createElement('li');
-      let listItem2 = document.createElement('li');
-      let listItem3 = document.createElement('li');
-      let listItem4 = document.createElement('li');
+      let name = records[i].fields.Name;
+      // let dataNumber = records[i].fields.Number;
+      let dataCategory = records[i].fields.category;
+      let dataLinks = records[i].fields.links;
 
-      // console.log(dataCategory);
+      let listItem4 = document.createElement('div');
+
+
+      listItem4.setAttribute("id", "div_parent_wrap");
 
       let imgZ = document.createElement('img');
+      // let listItem1 = document.createElement('div');
+      let listItem2 = document.createElement('div');
 
-      listItem1.appendChild(document.createTextNode(name));
-      listItem2.appendChild(document.createTextNode(dataNumber));
-      listItem3.appendChild(document.createTextNode(dataCategory));
-      listItem4.appendChild(imgZ);
+      listItem4.appendChild(imgZ).className = "data_images";
+      listItem4.appendChild(listItem2).innerHTML = name + " – " + dataCategory;
+      // listItem4.appendChild(listItem1).innerHTML = dataCategory;
 
+      listItem2.setAttribute("id", "data_sea_display");
+      // listItem1.setAttribute("id", "data_ocean_display");
       imgZ.src = dataLinks;
 
-      imgZ.style.width = 20 + "px";
-
-
-    //   listItem4.src = dataLinks;
-
-      // ul4.src = "https://" + dataLinks;
-
-      ul1.appendChild(listItem1);
-      ul2.appendChild(listItem2);
-      ul3.appendChild(listItem3);
       ul4.appendChild(listItem4);
     }
   }

@@ -5,10 +5,14 @@ html {
   color: white;
   font-family: 'paralucent', sans-serif;
   font-weight: 300;
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin-left: 5vw;
   margin-right: 5vw;
-  margin-top: 3vh;
+  margin-top: 5vh;
+}
+
+body {
+  margin-bottom: 10vh;
 }
 
 header {
@@ -38,17 +42,19 @@ a {
 
 .filters_classes {
   margin-top: 5vh;
+  margin-bottom: 3vh;
 }
 
 .down_arrow_ocean {
-  width: 10px;
+  width: 8px;
   height: auto;
+  margin: 0;
 }
 
 #dropbtn_ocean {
   background-color: black;
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.6rem !important;
   font-weight: 200;
   border: none;
   cursor: pointer;
@@ -61,8 +67,8 @@ a {
 }
 
 .dropdown_content_ocean {
-  font-size: 0.75rem !important;
-  margin-left: 2vw;
+  font-size: 0.6rem !important;
+  margin-left: 15px;
   min-width: 90px;
   display: none;
   position: absolute;
@@ -91,14 +97,14 @@ a {
 }
 
 .down_arrow_sea {
-  width: 10px;
+  width: 8px;
   height: auto;
 }
 
 #dropbtn_sea {
   background-color: black;
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.6rem !important;
   font-weight: 200;
   border: none;
   cursor: pointer;
@@ -110,9 +116,9 @@ a {
 }
 
 .dropdown_content_sea {
-  min-width: 150px;
-  margin-left: 2vw;
-  font-size: 0.75rem !important;
+  min-width: 155px;
+  margin-left: 15px;
+  font-size: 0.6rem !important;
   display: none;
   position: absolute;
   background-color: black;
@@ -141,25 +147,31 @@ a {
 
 
 .data_display {
-  display: flex;
-  align-content: space-between;
-  width: 70vw;
 }
 
-ul {
-  list-style-type: none;
- }
+.data_images {
+  width: 20vw;
+  height: 20vh;
+  object-fit: cover;
+}
 
- li {
-   margin-top: 2vh;
-   margin-bottom: 2vh;
- }
+#data_imgs_flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  row-gap: 5vh;
+}
 
-img {
-   margin-left: 2vh;
-   height: auto;
+#data_sea_display {
+  font-size: 1vw;
+  font-weight: 300;
+}
 
- }
+#data_ocean_display {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
 
 
 
@@ -176,8 +188,28 @@ img {
     align-items: center;
   }
 
+  .down_arrow_ocean, .down_arrow_sea {
+    width: 6px;
+  }
+
+  .dropdown_content_ocean {
+    margin-left: 13px;
+    min-width: 60px;
+  }
+
+  .dropdown_content_sea {
+    margin-left: 13px;
+    min-width: 100px;
+  }
+
+  .dropdown_ocean {
+    margin-right: 0;
+  }
+
+
   .filters_classes {
-    margin-top: 2vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -186,5 +218,35 @@ img {
   .ar_view {
     display: block;
   }
+
+  .data_images {
+    width: 80vw;
+    height: 20vh;
+    object-fit: cover;
+  }
+
+  .data_display {
+    display: block;
+    text-align: center;
+  }
+
+  #data_imgs_flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 5vh;
+  }
+
+  #data_sea_display {
+    font-size: 3vw;
+    font-weight: 300;
+  }
+
+  #data_ocean_display {
+    font-size: 0.75rem;
+    font-weight: 300;
+  }
+
 
 }

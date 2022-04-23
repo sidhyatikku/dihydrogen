@@ -5,12 +5,6 @@ body {
   width: 90vw;
 }
 
-.data_display {
-  display: flex;
-  align-content: space-between;
-  width: 70vw;
-}
-
 ul {
   list-style-type: none;
  }
@@ -29,4 +23,18 @@ img {
 button {
   cursor: pointer;
   background-color: darkgray;
+}
+
+.data_images {
+  width: 25vw;
+  height: 25vh;
+  object-fit: cover;
+}
+
+#data_imgs_flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  row-gap: 5vh;
 }
